@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>leason12</title>
+  </head>
+  <body>
+    <form>
+      <label for="width">Введіть ширину: </label>
+      <input type="number" name="width" id="width" />
+      <label for="height">Введіть висоту: </label>
+      <input type="number" name="height" id="height" />
+      <label for="ellipse">Ellipse</label>
+      <input type="checkbox" name="ellipse" id="ellipse" />
+      <input type="button" class="btn" value="малювати" disabled />
+    </form>
+
+    <svg style="width: 600px; height: 500px">
+      <rect
+        class="brawn"
+        x="10"
+        y="10"
+        width="300"
+        height="300"
+        style="fill: brown; opacity: 0; transition: 0.5s"
+      />
+    </svg>
+    <svg style="width: 600px; height: 500px">
+      <ellipse
+        class="eva"
+        cx="200"
+        cy="80"
+        rx="100"
+        ry="50"
+        style="
+          fill: yellow;
+          stroke: purple;
+          stroke-width: 2;
+          opacity: 0;
+          transition: 0.5s;
+        "
+      />
+    </svg>
+    <!-- //ДРУГЕ ЗАВДАННЯ------------------------------------------------- -->
+    <form>
+      <label for="diam">Введіть діаметр </label>
+      <input type="number" name="diam" id="diam" />
+      <input type="button" class="btnDiam" value="новий круг" />
+    </form>
+    <svg style="width: 600px; height: 500px">
+      <circle
+        class="circle"
+        cx="100"
+        cy="100"
+        r="90"
+        stroke="red"
+        fill="transparent"
+        stroke-width="5"
+        style="
+          fill: yellow;
+          stroke: purple;
+          stroke-width: 2;
+          opacity: 0;
+          transition: 0.3s;
+        "
+      />
+    </svg>
+    <!-- //третє ЗАВДАННЯ------------------------------------------------- -->
+    <form style="margin-bottom: 22px">
+      <label for="textInCircle">Введіть дані у кружок </label>
+      <input type="text" name="text" id="textInCircle" />
+      <input
+        type="button"
+        class="btnTextCanvas"
+        value="клацни та появиться текст у кругу"
+      />
+      <input
+        type="button"
+        class="btnCanvas"
+        value="клацни та появиться круг канваса"
+      />
+      <input type="button" class="clear" value="стерти дані" />
+    </form>
+    <canvas
+      width="300"
+      height="300"
+      style="
+        border: 2px solid black;
+        border-radius: 50%;
+        display: flex;
+        opacity: 0;
+      "
+    >
+    </canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
